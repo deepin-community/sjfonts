@@ -1,0 +1,29 @@
+Source: sjfonts
+Section: fonts
+Priority: optional
+Maintainer: Debian Fonts Task Force <debian-fonts@lists.debian.org>
+Uploaders: Daniel Schepler <schepler@debian.org>,
+           Hideki Yamane <henrich@debian.org>
+Build-Depends: debhelper-compat (= 13),
+Build-Depends-Indep: fontforge-nox|fontforge,
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/fonts-team/sjfonts.git
+Vcs-Browser: https://salsa.debian.org/fonts-team/sjfonts
+Homepage: https://sourceforge.net/projects/sjfonts/
+Rules-Requires-Root: no
+
+Package: ttf-sjfonts
+Architecture: all
+Depends: ${misc:Depends}, fonts-sjfonts
+Description: Some Juicy Fonts handwriting fonts (dummy package)
+ This is transitional dummy package, it can be safely removed.
+
+Package: fonts-sjfonts
+Architecture: all
+Depends: ${misc:Depends}
+Breaks: ttf-sjfonts (<< 2.1-1)
+Replaces: ttf-sjfonts (<< 2.1-1)
+Multi-Arch: foreign
+Description: Some Juicy Fonts handwriting fonts
+ This package contains two handwriting fonts created by Steve Jordi,
+ Delphine and SteveHand, in TrueType format.
